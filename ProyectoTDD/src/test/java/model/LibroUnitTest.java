@@ -16,16 +16,23 @@ public class LibroUnitTest {
     @Test
     void instanceBook_allFieldsOK_success(){
 
-        Book myBook= Book.instance("titulo","autor","genero","isbn",LocalDate.of(2026,10,5),"tecnico",464,"Robert C. Martin");
+        Book myBook= Book.instance("Titulo",
+                "Autor",
+                "Genero",
+                "ISBN",
+                LocalDate.of(2026,10,5),
+                "Tipo",
+                464,
+                "Editorial");
 
-        assertEquals("titulo", myBook.getTitulo());
-        assertEquals("autor", myBook.getAutor());
-        assertEquals("genero", myBook.getGenero());
-        assertEquals("isbn", myBook.getIsbn());
+        assertEquals("Titulo", myBook.getTitulo());
+        assertEquals("Autor", myBook.getAutor());
+        assertEquals("Genero", myBook.getGenero());
+        assertEquals("ISBN", myBook.getIsbn());
         assertEquals(LocalDate.of(2026,10,5), myBook.getFecha());
-        assertEquals("tecnico", myBook.getTipo());
+        assertEquals("Tipo", myBook.getTipo());
         assertEquals(464, myBook.getPaginas());
-        assertEquals("Robert C. Martin", myBook.getEditorial());
+        assertEquals("Editorial", myBook.getEditorial());
 
     };
 
